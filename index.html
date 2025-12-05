@@ -6,24 +6,26 @@
     <title>Casa de Santiago</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
-        .font-serif-italic{font-family:'Playfair Display',serif;font-style:italic}
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body{font-family:'Montserrat',sans-serif}
+        h1,h2,h3,h4,h5,h6,.font-serif{font-family:'Cormorant Garamond',serif;font-weight:500}
+        .font-serif-italic{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400}
         .slide{transition:opacity 1s}
     </style>
 </head>
 <body class="bg-white">
     <header class="fixed w-full bg-white shadow-md z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">Casa de Santiago</h1>
+            <h1 class="text-3xl font-serif font-semibold text-gray-800 tracking-wide">Casa de Santiago</h1>
             <button id="menuBtn" class="md:hidden">
                 <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
-            <nav class="hidden md:flex space-x-6">
-                <button onclick="showTab('inicio')" class="nav-link text-blue-600 font-semibold">Início</button>
-                <button onclick="showTab('espaco')" class="nav-link text-gray-600 hover:text-blue-600">Espaço</button>
-                <button onclick="showTab('contacto')" class="nav-link text-gray-600 hover:text-blue-600">Contacto</button>
-                <button onclick="showTab('localizacao')" class="nav-link text-gray-600 hover:text-blue-600">Localização</button>
+            <nav class="hidden md:flex space-x-8">
+                <button onclick="showTab('inicio')" class="nav-link text-blue-600 font-medium tracking-wide">Início</button>
+                <button onclick="showTab('espaco')" class="nav-link text-gray-600 hover:text-blue-600 font-medium tracking-wide">Espaço</button>
+                <button onclick="showTab('contacto')" class="nav-link text-gray-600 hover:text-blue-600 font-medium tracking-wide">Contacto</button>
+                <button onclick="showTab('localizacao')" class="nav-link text-gray-600 hover:text-blue-600 font-medium tracking-wide">Localização</button>
             </nav>
         </div>
         <nav id="mobileMenu" class="md:hidden bg-white border-t hidden">
