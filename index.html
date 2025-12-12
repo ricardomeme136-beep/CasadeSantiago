@@ -174,7 +174,7 @@
     </section>
 
     <!-- Space Section with Parallax -->
-    <section id="espaco" class="parallax py-32" style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&h=1080&fit=crop')">
+    <section id="espaco" class="parallax py-32" style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f29da8d742?w=1920&h=1080&fit=crop')">
         <div class="container mx-auto px-6">
             <div class="glass-effect rounded-3xl p-12 max-w-4xl mx-auto text-center text-white">
                 <h3 class="text-5xl mb-8">O Espaço</h3>
@@ -189,19 +189,19 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="galeria" class="py-24 bg-white">
+ <section id="galeria" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h3 class="text-5xl mb-4 text-gray-800">Galeria</h3>
                 <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-3 gap-4 max-w-7xl mx-auto">
-                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=800&fit=crop" class="w-full h-full object-cover"></div>
-                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&h=800&fit=crop" class="w-full h-full object-cover"></div>
-                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=800&fit=crop" class="w-full h-full object-cover"></div>
-                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&h=800&fit=crop" class="w-full h-full object-cover"></div>
-                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=800&fit=crop" class="w-full h-full object-cover"></div>
-                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="https://images.unsplash.com/photo-1519167758481-83f29da8d742?w=600&h=800&fit=crop" class="w-full h-full object-cover"></div>
+                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="1.jpg" class="w-full h-full object-cover"></div>
+                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="2.jpg" class="w-full h-full object-cover"></div>
+                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="3.jpg" class="w-full h-full object-cover"></div>
+                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="4.jpg" class="w-full h-full object-cover"></div>
+                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="5.jpg" class="w-full h-full object-cover"></div>
+                <div class="relative overflow-hidden rounded-lg hover-lift h-80"><img src="6.jpg" class="w-full h-full object-cover"></div>
             </div>
         </div>
     </section>
@@ -237,8 +237,15 @@
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div><h5 class="text-xl mb-4">Casa de Santiago</h5><p class="text-gray-400 text-sm">Onde os momentos especiais se tornam memórias eternas.</p></div>
                 <div><h5 class="text-lg mb-4">Links Rápidos</h5><ul class="space-y-2 text-sm text-gray-400"><li><a href="#inicio" class="hover:text-white">Início</a></li><li><a href="#eventos" class="hover:text-white">Eventos</a></li><li><a href="#galeria" class="hover:text-white">Galeria</a></li></ul></div>
-                <div><h5 class="text-lg mb-4">Contacto</h5><ul class="space-y-2 text-sm text-gray-400"><li>geral@casadesantiago.pt</li><li>+351 917 113 539</li></ul></div>
-                <div><h5 class="text-lg mb-4">Localização</h5><p class="text-sm text-gray-400">R. dos Poços 7, Esporões</p></div>
+                <div><h5 class="text-lg mb-4">Contacto</h5><ul class="space-y-2 text-sm text-gray-400"><li>geral@casadesantiago.pt</li><li>+351 XXX XXX XXX</li></ul></div>
+                <div>
+                    <h5 class="text-lg mb-4">Redes Socias</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="https://www.instagram.com/casa.desantiago/"  class="hover:text-white">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/CasaDeSantiago.eventos" class="hover:text-white">Facebook</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=351917113539" class="hover:text-white">Whatsapp</a></li>
+                </ul>
+            </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
                 <p>&copy; 2024 Casa de Santiago. Todos os direitos reservados.</p>
@@ -260,12 +267,78 @@
         document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){e.preventDefault();document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'})}));
         
         async function enviarFormulario(){
-            const d={nome:document.getElementById('nome').value,email:document.getElementById('email').value,telefone:document.getElementById('telefone').value,tipoEvento:document.getElementById('tipoEvento').value,numConvidados:document.getElementById('numConvidados').value,data:document.getElementById('data').value,horario:document.getElementById('horario').value,observacoes:document.getElementById('observacoes').value};
-            if(!d.nome||!d.email||!d.telefone){document.getElementById('errorMsg').classList.remove('hidden');setTimeout(()=>document.getElementById('errorMsg').classList.add('hidden'),3000);return}
+            const nome=document.getElementById('nome').value;
+            const email=document.getElementById('email').value;
+            const telefone=document.getElementById('telefone').value;
+            const tipoEvento=document.getElementById('tipoEvento').value;
+            const numConvidados=document.getElementById('numConvidados').value;
+            const data=document.getElementById('data').value;
+            const horario=document.getElementById('horario').value;
+            const observacoes=document.getElementById('observacoes').value;
+            
+            if(!nome||!email||!telefone||tipoEvento==='Tipo de Evento *'||numConvidados==='Número de Convidados *'){
+                document.getElementById('errorMsg').textContent='✗ Por favor preencha todos os campos obrigatórios';
+                document.getElementById('errorMsg').classList.remove('hidden');
+                setTimeout(()=>document.getElementById('errorMsg').classList.add('hidden'),3000);
+                return;
+            }
+            
+            const mensagemCompleta=`
+📧 NOVO PEDIDO DE ORÇAMENTO - CASA DE SANTIAGO
+
+👤 DADOS DO CLIENTE:
+Nome: ${nome}
+Email: ${email}
+Telemóvel: ${telefone}
+
+🎉 DETALHES DO EVENTO:
+Tipo de Evento: ${tipoEvento}
+Número de Convidados: ${numConvidados}
+Data: ${data||'A definir'}
+Horário: ${horario||'A definir'}
+
+💬 OBSERVAÇÕES:
+${observacoes||'Sem observações adicionais'}
+
+---
+Mensagem enviada através do website Casa de Santiago
+            `;
+            
+            const formData=new FormData();
+            formData.append('access_key','04ac4515-d6f8-4ddf-ae9d-e8f1c2699c35');
+            formData.append('subject',`Novo Pedido: ${tipoEvento} - ${nome}`);
+            formData.append('from_name','Website Casa de Santiago');
+            formData.append('message',mensagemCompleta);
+            formData.append('email',email);
+            
             try{
-                const r=await fetch('https://formspree.io/f/YOUR_FORM_ID',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});
-                if(r.ok){document.getElementById('successMsg').classList.remove('hidden');document.querySelectorAll('input,select,textarea').forEach(e=>e.value='');setTimeout(()=>document.getElementById('successMsg').classList.add('hidden'),5000)}else{document.getElementById('errorMsg').classList.remove('hidden');setTimeout(()=>document.getElementById('errorMsg').classList.add('hidden'),3000)}
-            }catch(e){document.getElementById('errorMsg').classList.remove('hidden');setTimeout(()=>document.getElementById('errorMsg').classList.add('hidden'),3000)}
+                const response=await fetch('https://api.web3forms.com/submit',{
+                    method:'POST',
+                    body:formData
+                });
+                
+                const data=await response.json();
+                
+                if(data.success){
+                    document.getElementById('successMsg').classList.remove('hidden');
+                    document.getElementById('nome').value='';
+                    document.getElementById('email').value='';
+                    document.getElementById('telefone').value='';
+                    document.getElementById('tipoEvento').selectedIndex=0;
+                    document.getElementById('numConvidados').selectedIndex=0;
+                    document.getElementById('data').value='';
+                    document.getElementById('horario').value='';
+                    document.getElementById('observacoes').value='';
+                    setTimeout(()=>document.getElementById('successMsg').classList.add('hidden'),5000);
+                }else{
+                    throw new Error('Erro ao enviar');
+                }
+            }catch(error){
+                console.log('Erro:',error);
+                document.getElementById('errorMsg').textContent='✗ Erro ao enviar mensagem. Tente novamente.';
+                document.getElementById('errorMsg').classList.remove('hidden');
+                setTimeout(()=>document.getElementById('errorMsg').classList.add('hidden'),3000);
+            }
         }
     </script>
 </body>
